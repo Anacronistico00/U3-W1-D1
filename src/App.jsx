@@ -10,9 +10,15 @@ function App() {
   const handleClick = () => {
     setCount(count + 1);
   };
+
   const handleNoClick = () => {
     alert('Questo bottone non fa nulla di utile!');
   };
+
+  const resetCounter = () => {
+    setCount(0);
+  };
+
   return (
     <>
       <div>
@@ -22,6 +28,10 @@ function App() {
         <ButtonComponent content='Clicca qui' onClick={handleClick} />
         <ButtonComponent content='Qui invece no' onClick={handleNoClick} />
         <p>Conteggio di click sul bottone: {count}</p>
+        <ButtonComponent
+          content='Reset numero di Click'
+          onClick={resetCounter}
+        />
       </div>
       <div>
         <ImageComponent
