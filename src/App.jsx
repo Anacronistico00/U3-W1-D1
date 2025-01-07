@@ -7,14 +7,21 @@ import ImageComponent from './components/ImageComponent';
 function App() {
   const [count, setCount] = useState(0);
 
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  const handleNoClick = () => {
+    alert('Questo bottone non fa nulla di utile!');
+  };
   return (
     <>
       <div>
         <h1>Primo esercizio React</h1>
       </div>
       <div>
-        <ButtonComponent content='Clicca qui' />
-        <ButtonComponent content='Qui invece no' />
+        <ButtonComponent content='Clicca qui' onClick={handleClick} />
+        <ButtonComponent content='Qui invece no' onClick={handleNoClick} />
+        <p>Conteggio di click sul bottone: {count}</p>
       </div>
       <div>
         <ImageComponent

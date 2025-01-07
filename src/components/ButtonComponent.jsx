@@ -1,7 +1,7 @@
 const ButtonComponent = function (props) {
   return (
     <>
-      <button>{props.content}</button>
+      <button onClick={props.onClick}>{props.content}</button>
     </>
   );
 };
